@@ -156,24 +156,18 @@ we use a [return statement](../../reference.html#return-statement) to send a res
 > A call to your function should look like this:
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > print(fence('name', '*'))
 > ~~~
 >
-> 
-{: .output}
-
+> {: .output}
 > ~~~
 > *name*
 > ~~~
 >
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > ~~~
 > > def fence(original, wrapper):
@@ -224,9 +218,7 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > For example, what would be the output from the following:
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > f = 0
 > k = 0
@@ -246,9 +238,7 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > 3. 0
 >
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > 3 - the f and k variables defined and used within the function
 > > do not interfere with those defined outside of the function.
@@ -266,9 +256,7 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > Following the function definition, a call to your function should look like this:
 >
 >
-> 
-{: .python}
-
+> {: .python}
 > ~~~
 > is_sum_equal([1,2,3], 6))
 > True
@@ -276,9 +264,7 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > False
 > ~~~
 >
-> 
-{: .solution}
-
+> {: .solution}
 > > ## Solution
 > > ~~~
 > > def is_sum_equal(number_list, sum_value):
