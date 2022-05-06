@@ -116,7 +116,7 @@ for n, lesson_info in enumerate(website_config['lessons']):
                 log.info(f"Copied submodules/{lesson_name}/{file} to {dest}")
             except:
                 log.error(f"Cannot find or move submodules/{lesson_name}/{file}, but carrying on anyway")
-z
+
         for file in os.listdir(dest):
             if file.endswith(".md"):
                 with open(f"{dest}/{file}", "r") as f:
