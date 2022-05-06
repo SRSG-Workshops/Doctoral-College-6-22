@@ -298,7 +298,7 @@ def main():
 
             start_time = get_time_object(lesson_starts[0])
             start_time_minutes = start_time.hour * 60 + start_time.minute
-            create_detailed_lesson_schedules(lesson_name, lesson_type, start_time_minutes)
+            create_detailed_lesson_schedules(lesson_name, lesson_type, start_time_minutes, lesson_title)
         elif website_kind == 'course':
             path = Path(f"_includes/rsg/{lesson_name}-lesson/blurb.html")
 
