@@ -33,28 +33,6 @@ To use Git you must install the Apple Command Line Tools.  You can obtain these 
 - Open the downloaded dmg archive from the Downloads folder
 - Double-click the Command Line Tools.pkg icon to install
 
-## Download Data for Shell Lesson ##
-
-Type the following into the prompt that appears (pressing enter/return after each line):
-
-~~~
-$ cd
-$ git clone https://github.com/Southampton-RSG-Training/shell-novice.git
-~~~
-{: .language-bash}
-
-Alternatively, if you have SSH authentication with GitHub enabled (if you don't know what this means don't worry, it is covered in the Git SWC course if you want to know more!) you can use the following:
-
-~~~
-$ cd
-$ git clone git@github.com:Southampton-RSG-Training/shell-novice.git
-~~~
-{: .language-bash}
-
-This should download all the content for the lesson to a new directory.
-Please let the instructors know if you run into any problems.
-
-{% include links.md %}
 ## GitHub ##
 Later on in the session, we'll be demonstrating how to share work with collaborators using [GitHub](https://github.com/). You'll need to [create an account there](https://github.com/signup). As your GitHub username will appear in the URLs of your projects there, it's best to use a short, clear version of your name if you can.
 
@@ -81,6 +59,28 @@ Copy the last line of output that starts with `ssh-ed25519` and ends with your e
 ![SSH-Output](fig/SSH-Output.png){:width="50%"}
 
 Finally, go to [your Settings -> SSH keys page and add a new SSH key](https://github.com/settings/ssh/new) (you'll need to be logged into GitHub with the account you have created). Give the key a memorable name (e.g. the name of the computer you are working on) and paste the key from your clipboard into the box labelled key. Then, click **Add SSH key** and you're done!
+## Download Data for Shell Lesson ##
+
+Type the following into the prompt that appears (pressing enter/return after each line):
+
+~~~
+$ cd
+$ git clone https://github.com/Southampton-RSG-Training/shell-novice.git
+~~~
+{: .language-bash}
+
+Alternatively, if you have SSH authentication with GitHub enabled (if you don't know what this means don't worry, it is covered in the Git SWC course if you want to know more!) you can use the following:
+
+~~~
+$ cd
+$ git clone git@github.com:Southampton-RSG-Training/shell-novice.git
+~~~
+{: .language-bash}
+
+This should download all the content for the lesson to a new directory.
+Please let the instructors know if you run into any problems.
+
+{% include links.md %}
 ## Download Data for Git Lesson ##
 
 Now we are ready to download the code that we need for this lesson, using Git on the command line. Open a terminal on your machine, and enter:
