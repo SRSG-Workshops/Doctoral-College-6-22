@@ -33,12 +33,19 @@ To use Git you must install the Apple Command Line Tools.  You can obtain these 
 - Open the downloaded dmg archive from the Downloads folder
 - Double-click the Command Line Tools.pkg icon to install
 
+#### Linux
+Git comes pre-installed on most Linux distributions. You can test if it's installed by running `git --version`. 
+If it's not installed, you can install it by running `sudo apt-get install git` or `sudo yum install git`, depending on 
+your distribution.
+
 ## GitHub ##
 Later on in the session, we'll be demonstrating how to share work with collaborators using [GitHub](https://github.com/). You'll need to [create an account there](https://github.com/signup). As your GitHub username will appear in the URLs of your projects there, it's best to use a short, clear version of your name if you can.
 
 In addition, we'll need to set up SSH access to GitHub from your computer. This is how GitHub checks your identity when you try to access it - and is more secure than a password. To set up SSH access, we generate a pair of keys - one public, one private. We want to add the public key to GitHub, whilst the private one stays on our computer.
 
 There are full guides in the GitHub documentation for how to [Make an SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and [Add an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account). However today we have simplified it like so:
+
+If you already have an ssh key you can use it for Github by coping the public key into the clipboard and pasting it into the GitHub settings page.
 
 First we need to create a variable to store your GitHub email. Copy this command, substituting the email you signed up to GitHub with for `your_github_email@example.com`:
 ~~~
@@ -68,6 +75,8 @@ $ cd
 $ git clone https://github.com/Southampton-RSG-Training/shell-novice.git
 ~~~
 {: .language-bash}
+
+`cd` will move to your home directory, and `git clone` will download a copy of the materials.
 
 Alternatively, if you have SSH authentication with GitHub enabled (if you don't know what this means don't worry, it is covered in the Git SWC course if you want to know more!) you can use the following:
 
@@ -103,6 +112,35 @@ Some old research projects may be in Python 2 but Python 2 has been retired and 
 
 ### Windows
 Download the latest Anaconda Windows installer. Double-click the installer and follow the instructions. When asked “Add Anaconda to my PATH environment variable”, answer “yes”. After it’s finished, close and reopen any open terminals to reload the updated PATH and allow the installed Python to be found.
+
+Please test the python install open GitBash (or your favorite terminal) and run the following command to verify that the installation was successful.
+
+{: .bash}
+~~~
+cd ~
+python
+~~~
+
+You can then type the following to exit:
+{: .python}
+~~~
+quit()
+~~~
+
+{: .callout}
+~~~
+In some cases GitBash will hang on this command and not launch the Python interpreter. 
+In this case close and reopen git bash and issue the following commands:
+~~~
+
+{: .bash}
+~~~
+cd ~
+echo 'alias python="winpty python.exe"' >> .bashrc
+source .bashrc
+python
+~~~
+
 
 ### Mac OS X
 Download the latest Anaconda Mac OS X installer. Double-click the .pkg file and follow the instructions.
