@@ -28,12 +28,21 @@ Most of the options can be left on default, but be sure you check these:
 - **Configuring the terminal emulator to use with Git Bash:** Make sure **Use Windows' default console window** is selected.
 
 #### Mac OS
-To use Git you must install the Apple Command Line Tools.  You can obtain these [from Apple](https://developer.apple.com/download/more/?name=command%20line%20tools%20for%20xcode%2012) (requires your Apple ID)
+To use Git you must install the Apple Command Line Tools, this may take a few minutes.  
+
+You can obtain these [from Apple](https://developer.apple.com/download/more/?name=command%20line%20tools%20for%20xcode%2012) (requires your Apple ID)
 
 - Select **Command Line Tools for Xcode 12** and click the link to download the dmg archive.
 - If prompted, choose to allow downloads from developer.apple.com
 - Open the downloaded dmg archive from the Downloads folder
 - Double-click the Command Line Tools.pkg icon to install
+
+Alternatively, you can install the tools from the command line:
+
+~~~
+$ xcode-select --install
+~~~
+{: .language-bash}
 
 #### Linux
 Git comes pre-installed on most Linux distributions. You can test if it's installed by running `git --version`. 
@@ -111,13 +120,13 @@ IDEs: PyCharm, Spyder, VS Code
 We use Python 3*. The “Anaconda3” package provides everything Python-related you will need for the workshop. 
 To install [Anaconda](https://www.anaconda.com/products/individual), follow the instructions below.
 
-Once the Anaconda installation is finished you will be asked if you want the installer to initialize Anaconda3 by 
-running conda init? You should select yes.
-
 Some old research projects may be in Python 2 but Python 2 has been retired and new projects should be in Python 3.
 
 ### Windows
 Download the latest Anaconda Windows installer. Double-click the installer and follow the instructions. When asked “Add Anaconda to my PATH environment variable”, answer “yes”. After it’s finished, close and reopen any open terminals to reload the updated PATH and allow the installed Python to be found.
+
+Once the Anaconda installation is finished you will be asked if you want the installer to initialize Anaconda3 by
+running conda init? You should select yes.
 
 Please test the python install open GitBash (or your favorite terminal) and run the following command to verify that the installation was successful.
 
@@ -157,8 +166,20 @@ Download the latest Anaconda Mac OS X installer. Double-click the .pkg file and 
 If you have a M1 Mac you need a specific version of Anaconda follow the link below. 
 [M1 Compatible Anaconda](https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-arm64.pkg)
 
+Once the Anaconda installation is finished you will be asked if you want the installer to initialize Anaconda3 by
+running conda init? You should select yes.
+
 ### Linux
-Download the latest Anaconda Linux Installer. Install via the terminal like this (you will need to change the version number to the latest version):
+Download the latest Anaconda Linux Installer.
+
+Install via the terminal like this (you will need to change the version number to the latest version):
+
+First move to the folder where you downloaded the installer, this is likely to be the Downloads folder e.g.
+
+~~~
+$ cd ~/Downloads
+~~~
+{: .language-bash}
 
 ~~~
 $ bash Anaconda3-2021.11-Linux-x86_64.sh
