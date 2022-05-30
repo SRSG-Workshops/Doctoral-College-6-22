@@ -220,7 +220,7 @@ def main():
                 raise ValueError(f"gh-name, title, date, and start-time are required for workshop")
             if website_kind == 'course':
                 raise ValueError(f"lesson_name, lesson_title, lesson_order are required for course")
-            
+
 
         # Since we allow multiple dates and start times per lesson, we need to be
         # able to iterate over even single values so turn into list. When done,
@@ -246,10 +246,10 @@ def main():
         if website_kind == 'workshop':
             if len(all_schedules) != len(lesson_dates):
                 raise ValueError(f"There are not the same number of lesson dates for the number of schedules for"
-                                  " {lesson_name} lesson")
+                                 " {lesson_name} lesson")
             if len(all_schedules) != len(lesson_starts):
                 raise ValueError(f"There are not the same number of lesson start times for the number of schedules for"
-                                  " {lesson_name} lesson")
+                                 " {lesson_name} lesson")
 
             # Loop over each schedule table, if the lesson has multiple schedules
 
